@@ -9,16 +9,22 @@
 
 </head>
 <body>
-    <div class="wrapper">
         <header> 
-            <div class="inner">
-                <div class="logo">logo</div>
-                <div class="mobile-toggle">hamburgare</div>
-            </div>
-            <div class="slogan">slogan</div>
-            <div class="menu-container">menycontainer</div>
+            <img src="/Images/logo.png" alt="Kajsas rosor Logo"/>
+            <h1 id="slogan">slogan</h1>
+            <button class="hamburger">H</button>
+            <nav>
+                <ul>
+                    <li><a href="http://www.url.com">Anchor Text</a></li>
+                    <li>
+                        <label for="snittrosor">Snittrosor</label>
+                        <ul id="snittrosor" class="sublist">
+                            <li><a href="http://www.url.com">Anchor Text</a></li>
+                            <li><a href="http://www.url.com">Anchor Text</a></li>
+                            <li><a href="http://www.url.com">Anchor Text</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
         
-        <div class="hero"> </div>
-
-        <div class="page-container">
