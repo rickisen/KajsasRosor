@@ -1,0 +1,21 @@
+$primaryColor: #D41378;
+$black: #000;
+$white: #fff;
+
+@mixin clearfix {
+	&:before, &:after{
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin bgimg {
+	background-image: url('../img/yo.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}

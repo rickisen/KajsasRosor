@@ -1,0 +1,72 @@
+.wrapper {
+	max-width: 640px;
+	margin: 0 auto;
+	outline: 1px solid black;
+	overflow: hidden;
+}
+
+header {
+	background-color: $black;
+	color: $primaryColor;
+
+	.inner{
+		padding: 10px;
+		@include clearfix;
+	}
+
+	.slogan, .menu-container{
+		display:none;
+	}
+
+	.logo, .mobile-toggle{
+		float: left;
+	}
+	.logo{
+		width: 70%;
+	}
+	.mobile-toggle{
+		width: 30%;
+	}
+
+
+}
+.hero {
+	width: 100%;
+	@include bgimg;
+	max-height: 200px;
+	min-height: 100px;
+
+}
+
+.bloopers {
+	.blooper{
+		width: 300px;
+		height:  300px;
+		outline: 1px solid red;
+		position: relative;
+
+		.bg-image{
+			@include bgimg;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.blooper-text {
+			position: absolute;
+			width: 100%;
+			.headling {
+				background-color: transparentize($primaryColor, 0.7);
+			}
+			&:hover {
+				.text {
+					display:block;
+				}
+			}
+			.text {
+				display: none;
+				background-color: $white;
+			}
+		}
+	}
+}

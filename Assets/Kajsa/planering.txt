@@ -1,0 +1,20 @@
+wrap runt hela sidan för att få till avståndet på sidorna i maxbress, max 1600 px i bredd
+
+header
+	-logotyp
+	-slogan
+	-menyrad men flytande undermeny
+
+hero image
+
+page container
+	-sidtitel på bakgrund
+	-två kolumner
+
+puff (4st)
+	-bakgrundsbild som ska vara responsiv som alltid ska täcka rutan
+	-rubrik (typ röda rosor)
+	-div för pufftext
+
+footer
+	-
