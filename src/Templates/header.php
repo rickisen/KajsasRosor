@@ -9,10 +9,14 @@
 
 </head>
 <body>
+    <div class="wrapper">
         <header> 
-            <img src="/Images/logo.png" alt="Kajsas rosor Logo"/>
-            <h1 id="slogan">slogan</h1>
-            <button class="hamburger">H</button>
+            <div class="top">
+                <img src="/Images/logo.png" alt="Kajsas rosor Logo">
+                <h1 id="slogan">Klippt och skuren för rosor</h1>
+                <button class="hamburger">H</button>
+                <div class="clear"></div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="http://www.url.com">Anchor Text</a></li>
@@ -24,6 +28,7 @@
                             <li><a href="http://www.url.com">Anchor Text</a></li>
                         </ul>
                     </li>
+                    <li><a href="http://www.url.com">Anchor Text</a></li>
                 </ul>
             </nav>
         </header>

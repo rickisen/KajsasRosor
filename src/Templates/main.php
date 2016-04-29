@@ -1,21 +1,23 @@
-<img id="hero" class="bg-image" style="background-image:url('/Images/yo.jpg');" src="/Images/1px-trans.png" alt="Picture of a rose"/> 
+<div id="hero" class="bg-image" style="background-image:url('/Images/yo.jpg')" alt="Picture of a rose"> </div>
 
 <main>
     <header> 
-        <p>Kajsas Rosor</p>
+        Kajsas Rosor
     </header>
 
     <article>
-        <h1>Detta är Kajsas Rosor</h1>
+        <header>
+            <h1>Detta är Kajsas Rosor</h1>
+        </header>
 
-        <p class="left">
+        <img src="/Images/mainRose.svg" alt="A picture of a Rose"/>
+
+        <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
             tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
             vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
-        <img class="right" src="/Images/mainRose.svg" alt="A picture of a Rose"/>
-        <div class="clear"></div>
 
         <section>
             <h2>Rosen Idag</h2>
@@ -70,4 +72,4 @@
           <img src="Images/map.jpg" alt="An image of a map displaying the location of the store"/>
         </section>
     </address>
-
+<!-- main is closed in footer, since it contains the footer also -->
