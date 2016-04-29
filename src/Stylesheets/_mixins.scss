@@ -1,20 +1,32 @@
- $primaryColor:#d41378; 
- $black:#000; 
- $white:#fff;
+$primaryColor:#d41378; 
+$primaryBg: #9e015c; 
+$black:#000; 
+$white:#fff;
+$mobileWidth:640px;
 
- @mixin clearfix {
-     &:before, &:after {
-         content:" "; 
-         display:table;
-     }
+@mixin clearfix {
+    &:before, &:after {
+        content:" "; 
+        display:table;
+    }
 
-     &:after {
-         clear:both;
-     }
- }
- @mixin bgimg {
-        background-image:url('/Images/yo.jpg'); 
-        background-size:cover;
-        background-position:center center;
-        background-repeat:no-repeat;
- }
+    &:after {
+        clear:both;
+    }
+}
+@mixin mainSizing {
+    padding:0 1em;
+    max-width:48em;
+    margin:0 auto;
+}
+
+@mixin bgimg {
+    background-color:grey;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    min-width:50px;
+    min-height:50px;
+}
+
+.clear { clear:both; } 

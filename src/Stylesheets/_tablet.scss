@@ -1,0 +1,85 @@
+.wrapper > header {
+    .top {
+        img {
+        }
+
+        button {
+            display:none;
+        }
+
+        #slogan {
+            float:right;
+            display:inline;
+            margin-right:1em;
+        }
+    }
+
+    nav {
+        display:block;
+        position:absolute;
+        line-height:1.5em;
+        background-color:transparentize($primaryColor, 0.2);
+        color:white;
+        max-width:100em; 
+        width:100%; 
+        > ul {
+            @include mainSizing; 
+           > li {
+               ul {
+                   padding: 0;
+                   position: absolute;
+                   background-color:transparentize($primaryColor, 0.2);
+                   li {
+                       display:inline-block; 
+                       padding: 5px;
+                   }
+               } 
+               display:inline-block;
+           }
+        }
+
+        a {
+            text-decoration:none;
+            color:white;
+        }
+    }
+}
+
+#hero {
+    // height: 15.62em;
+    height: 20vh;
+}
+
+.wrapper > main {
+    position: relative;
+
+    > header {
+        max-width:46em;
+        width:100%;
+        margin:0 -1em;
+        padding:0 2em;
+        position:absolute;
+        display:block;
+        top:-1.5em;
+        line-height:1.5em;
+        background-color:rgba(40,40,40,0.7); 
+        color:white;
+    }
+
+    > article {
+        padding: 1em;
+        line-height:1.5em;
+        header > h1 {
+            margin: 0;
+        }
+    }
+
+    > address {
+        display:none;
+    }
+
+    > footer {
+        background-color:black;
+        color:white;
+    }
+}

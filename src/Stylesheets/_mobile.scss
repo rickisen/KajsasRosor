@@ -1,77 +1,85 @@
-.wrapper {
-    max-width: 640px;
-    margin: 0 auto;
-    outline: 1px solid black;
-    overflow: hidden;
+body {
+    background-color:black;
 }
 
-header {
-    color:$primaryColor;
-    background-color: $black;
+.wrapper {
+    max-width:100em;
+    margin:0 auto;
+}
 
-    .inner{
-        padding:10px;
-        @include clearfix;
+.wrapper > header {
+    color:grey;
+
+    .top {
+        @include mainSizing; 
+
+        img {
+            width:216;
+            max-width:35%;
+        }
+
+        button, #slogan {
+            max-width:75%;
+            margin:0;
+        }
+
+        button {
+            background-color:black;
+            color:$primaryColor;
+            border: none;
+            font-size:4em,
+        }
+
+        #slogan {
+            font-weight:100;
+            display:none;
+        }
     }
 
-    .slogan, .menu-container{
+    nav {
+        background-color:$primaryBg;
+        color:black;
+        // display:none;
+        ul {
+           margin: 0; 
+           list-style:none;
+        }
+
+        a{
+            text-decoration:none;
+            color:black;
+        }
+    }
+}
+
+#hero {
+    @include bgimg; 
+    width:100%; 
+    height:17.8vh;
+}
+
+.wrapper > main {
+    background-color:transparentize(white, 0.05);
+    @include mainSizing; 
+
+    > header {
         display:none;
     }
 
-    .logo, .mobile-toggle{
-        float: left;
-    }
-
-    .logo {
-        width: 70%;
-    }
-
-    .mobile-toggle{
-        width: 30%;
-    }
-}
-
-.hero {
-    width:100%; 
-    @include bgimg; 
-    background-attachment:fixed;
-    max-height: 200px;
-    min-height: 100px;
-}
-
-.bloopers {
-    .blooper{
-        width: 300px;
-        height: 300px;
-        outline:1px solid red;
-        position:relative;
-
-        .bg-image{
-            @include bgimg; 
-            position: absolute;
-            width: 100%;
-            height: 100%;
+    > article {
+        padding: 1em;
+        line-height:1.5em;
+        header > h1 {
+            margin: 0;
         }
+    }
 
-        .blooper-text{
-            position: absolute;
-            width: 100%;
+    > address {
+        display:none;
+    }
 
-            .heading{
-                background-color:tranparentize($primaryColor, 0.7);
-            }
-
-            .text {
-                display:none;
-                background-color:&white;
-            }
-
-            &:hover{
-                .text{
-                    display:block;
-                    background-color: $white;
-                }
-            }
-        }
+    > footer {
+        background-color:black;
+        color:white;
     }
 }

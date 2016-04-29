@@ -1,0 +1,49 @@
+.wrapper > header {
+    .top {
+        img {
+        }
+
+        button {
+        }
+
+        #slogan {
+            color:red;
+        }
+    }
+
+    nav {
+        > ul {
+           > li {
+               ul {
+                   li {
+                   }
+               } 
+           }
+        }
+
+        a {
+        }
+    }
+}
+
+#hero {
+    height:32.25em;
+}
+
+.wrapper > main {
+    bottom:14.375em;
+
+    > header {
+    }
+
+    > article {
+        header > h1 {
+        }
+    }
+
+    > address {
+    }
+
+    > footer {
+    }
+}
