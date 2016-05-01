@@ -17,48 +17,7 @@ $(document).ready(function(){
 
         previousSize = newSize; 
     });
-
-    $('.hamburger').on('click', handleHamburger ); 
 }); 
-
-function getHeightOfHiddenElem(hiddenElement) {
-    var prevCss = hiddenElement.attr('style'); 
-
-    hiddenElement.css({
-        position:   'absolute', 
-        visibility: 'hidden',
-        display:    'block'
-    });
-
-    var height = hiddenElement.height();
-    hiddenElement.attr("style", prevCss ? prevCss : "");
-
-    return height;
-}
-
-function handleHamburger(event) {
-   toggleHamburger(); 
-}
-
-function toggleHamburger(direction = 'auto') {
-        var nav = $('.wrapper > header > nav')
-
-        // depending on if the header is currently fixed or static, 
-        // we might have to toggle/animate the height of the headerSpacer as well.
-        if ( $('.wrapper > header').css('position') == 'fixed' ){
-            var navHeight = getHeightOfHiddenElem(nav); 
-            // toggle/animate the nav, and the height of the header spacer
-            if (nav.css('display') == 'none' ){
-                $('#headerSpacer').animate({ height : '+=' + navHeight}, 400); 
-                nav.slideDown(); 
-            } else {
-                $('#headerSpacer').animate({ height : '-=' + navHeight}, 400); 
-                nav.slideUp(); 
-            }
-        } else {
-            nav.slideToggle(); 
-        }
-}
 
 function snapHeader() {
     var headerSpacer = $('#headerSpacer'); 
