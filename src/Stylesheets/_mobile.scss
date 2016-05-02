@@ -7,14 +7,8 @@ body {
     margin:0 auto;
 }
 
-#headerSpacer {
-    display:block;
-    height:100px;
-}
-
 .wrapper > header {
     color:grey;
-    position: fixed;
     background-color:black;
     width:100%;
     z-index:2;

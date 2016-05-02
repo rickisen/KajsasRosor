@@ -1,25 +1,56 @@
 "use strict"
 var previousSize = 0;
+var previousWasMobile = false;
+
 $(document).ready(function(){
-    if ( areWeMobile() ){
-        snapHeader();
+    headerFix();
+
+    $(window).resize(handleResize);
+
+    $('.hamburger').on('click', toggleHamburger ); 
+}); 
+
+function headerFix() {
+    var headerSpacer = $('#headerSpacer'); 
+    var header = $('.wrapper > header'); 
+
+    header.css('position', 'fixed'); 
+    headerSpacer.css('height', header.height()); 
+}
+
+function handleResize(event) {
+    var nav = $('.wrapper > header > nav'); 
+
+    if (!previousWasMobile && areWeMobile()){
+        nav.css('display','none'); 
+    } else if ( previousWasMobile && !areWeMobile() ){
+        nav.css('display','block'); 
+        headerFix();
     }
 
-    $(window).resize(function() {
-        let newSize = $(window).width(); 
+    previousWasMobile = areWeMobile();
+ }
 
-        if ( newSize < previousSize && areWeMobile() ){
-            snapHeader();
-            $('.wrapper > header > nav').css('display','none'); 
-        } else if (newSize > previousSize && !areWeMobile() ){
-            $('.wrapper > header > nav').css('display','block'); 
-        }
+function toggleHamburger(event) {
+    var nav = $('.wrapper > header > nav'); 
 
-        previousSize = newSize; 
-    });
+    var navHeight = getHeightOfHiddenElem(nav); 
+    if ( nav.css('display') == 'none' ){
+        nav.slideDown(); 
+        $('#headerSpacer').animate({ height : '+=' + navHeight}, 400); 
+    } else {
+        nav.slideUp(); 
+        $('#headerSpacer').animate({ height : '-=' + navHeight}, 400); 
+    }
+}
 
-    $('.hamburger').on('click', handleHamburger ); 
-}); 
+function areWeMobile() {
+    if ( $('.wrapper > header > nav > ul > li ').css('display') == 'inline-block'){
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function getHeightOfHiddenElem(hiddenElement) {
     var prevCss = hiddenElement.attr('style'); 
@@ -36,56 +67,3 @@ function getHeightOfHiddenElem(hiddenElement) {
     return height;
 }
 
-function handleHamburger(event) {
-   toggleHamburger(); 
-}
-
-function toggleHamburger(direction = 'auto') {
-        var nav = $('.wrapper > header > nav')
-
-        // depending on if the header is currently fixed or static, 
-        // we might have to toggle/animate the height of the headerSpacer as well.
-        if ( $('.wrapper > header').css('position') == 'fixed' ){
-            var navHeight = getHeightOfHiddenElem(nav); 
-            // toggle/animate the nav, and the height of the header spacer
-            if (nav.css('display') == 'none' ){
-                $('#headerSpacer').animate({ height : '+=' + navHeight}, 400); 
-                nav.slideDown(); 
-            } else {
-                $('#headerSpacer').animate({ height : '-=' + navHeight}, 400); 
-                nav.slideUp(); 
-            }
-        } else {
-            nav.slideToggle(); 
-        }
-}
-
-function snapHeader() {
-    var headerSpacer = $('#headerSpacer'); 
-    var header = $('.wrapper > header'); 
-
-    $(window).scroll(function() {
-        if( $(window).scrollTop() < 1 ) {
-            // make sure spacer is zero
-            headerSpacer.css('height','0');
-        
-            // make header static
-            header.css('position', 'static'); 
-        } else {
-            // make sure spacer is height of the header, 
-            // which might include a toggled hamburger menu
-            headerSpacer.css('height', $('.wrapper > header').height());
-
-            // make header fixed
-            header.css('position', 'fixed'); 
-        }
-    }); 
-}
-
-function areWeMobile() {
-    if ( $('.wrapper > header > nav > ul > li ').css('display') == 'inline-block'){
-        return false;
-    } else {
-        return true;
-    }
-}
