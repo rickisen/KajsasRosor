@@ -8,7 +8,7 @@ Install by running:
    grunt build
 ```
 
-## Run locally
+## Run locally with vagrant
 Start (and download/install) the vagrant VM with:
 ```
    vagrant up
