@@ -7,10 +7,20 @@ body {
     margin:0 auto;
 }
 
+#headerSpacer {
+    display:block;
+    height:100px;
+}
+
 .wrapper > header {
     color:grey;
+    position: fixed;
+    background-color:black;
+    width:100%;
+    z-index:2;
 
     .top {
+        height:100px;
         @include mainSizing; 
 
         img {
@@ -37,9 +47,9 @@ body {
     }
 
     nav {
-        background-color:$primaryBg;
+        background-color:$primaryColor;
         color:black;
-        // display:none;
+        display:none;
         ul {
            margin: 0; 
            list-style:none;

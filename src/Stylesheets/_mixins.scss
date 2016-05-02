@@ -1,5 +1,4 @@
 $primaryColor:#d41378; 
-$primaryBg: #9e015c; 
 $black:#000; 
 $white:#fff;
 $mobileWidth:640px;
@@ -16,7 +15,6 @@ $mobileWidth:640px;
 }
 @mixin mainSizing {
     padding:0 1em;
-    max-width:48em;
     margin:0 auto;
 }
 

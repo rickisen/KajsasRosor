@@ -1,5 +1,6 @@
 .wrapper > header {
     .top {
+        max-width:48em;
         img {
         }
 
@@ -13,12 +14,13 @@
 
     nav {
         > ul {
-           > li {
-               ul {
-                   li {
-                   }
-               } 
-           }
+            max-width:48em;
+            > li {
+                ul {
+                    li {
+                    }
+                } 
+            }
         }
 
         a {
@@ -28,12 +30,14 @@
 
 #hero {
     height:32.25em;
+    background-position:50% 57%; 
 }
 
 .wrapper > main {
     bottom:14.375em;
-
+    max-width:48em;
     > header {
+        max-width:46em;
     }
 
     > article {

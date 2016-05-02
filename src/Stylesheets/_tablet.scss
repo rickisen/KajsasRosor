@@ -25,6 +25,7 @@
         > ul {
             @include mainSizing; 
            > li {
+               display:inline-block;
                ul {
                    padding: 0;
                    position: absolute;
@@ -34,7 +35,6 @@
                        padding: 5px;
                    }
                } 
-               display:inline-block;
            }
         }
 
@@ -52,9 +52,11 @@
 
 .wrapper > main {
     position: relative;
+    > div {
+        box-sizing:border-box;
+    }
 
     > header {
-        max-width:46em;
         width:100%;
         margin:0 -1em;
         padding:0 2em;
@@ -67,7 +69,9 @@
     }
 
     > article {
-        padding: 1em;
+        width: 70%;
+        float:left;
+        // padding: 1em;
         line-height:1.5em;
         header > h1 {
             margin: 0;
@@ -75,10 +79,13 @@
     }
 
     > address {
-        display:none;
+        width:25%;
+        display:block;
+        float:right;
     }
 
     > footer {
+        clear:both;
         background-color:black;
         color:white;
     }
