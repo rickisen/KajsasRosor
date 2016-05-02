@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                 files : [{
                     expand : true,
                     cwd    : 'src',
-                    src    : ['index.php', 'Classes/*.php', 'Templates/*.php'],
+                    src    : ['index.php', 'Classes/*.php', 'Templates/*.php', 'Images/*.*'],
                     dest   : 'build/',
                 } ]
             }
