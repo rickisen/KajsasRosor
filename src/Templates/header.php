@@ -6,7 +6,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Stylesheets/main.css" media="screen" title="no title" charset="utf-8">
-
 </head>
 <body>
     <div class="wrapper">
@@ -32,4 +31,4 @@
                 </ul>
             </nav>
         </header>
-        
+        <div id="headerSpacer"> <!-- just an empty div to put some empty space beneth the fixed header --> </div>
