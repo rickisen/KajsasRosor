@@ -34,7 +34,7 @@
                 <!-- an image tag that that links to a 1px big transparent png, and is given an background image instead. For html5 syntastic reasons -->
                 <img class="bg-image" style="background-image:url('/Images/yo.jpg');" src="/Images/1px-trans.png" alt="Picture of a rose"/> 
                 <figcaption>
-                    <h2> Ros </h2> 
+                    <a href="/?/ros"><h2> Ros </h2></a> 
                     <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod </p>
                 </figcaption>
             </figure> 

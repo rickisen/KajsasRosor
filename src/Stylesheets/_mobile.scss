@@ -87,3 +87,63 @@ body {
         color:white;
     }
 }
+
+#bloopers figure {
+    width: $blooperWidth;
+    height: $blooperHeight;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+
+    img {
+        position: absolute;
+        @include bgimg; 
+        width: 100%;
+        height: 100%;
+    }
+
+    figcaption {
+        background-color:transparentize($primaryColor, 0.2);
+        position: absolute;
+        width: $blooperWidth;
+        height:4em;
+        text-align:center;    
+        overflow:hidden;
+
+        transition-timing-function: ease-in;
+        transition-property: height;
+        transition-duration: .2s;
+        transition-timing-function: linear;
+
+        a {
+            text-decoration:none;
+        }
+
+        h2 {
+            width: 100%;
+            color: white;
+            transition-timing-function: ease-in;
+            transition-property: color;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+
+        p {
+            display:none;
+            color: white;
+        }
+    }
+
+    figcaption:hover {
+        height: $blooperHeight;
+
+        h2 { 
+            color:black; 
+        }
+
+        p {
+            display:inline;
+        }
+    }
+    
+}
