@@ -18,16 +18,16 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="http://www.url.com">Anchor Text</a></li>
+                    <li><a id="testa" href="/?/main">Anchor Text</a></li>
                     <li>
                         <label for="snittrosor">Snittrosor</label>
                         <ul id="snittrosor" class="sublist">
-                            <li><a href="http://www.url.com">Anchor Text</a></li>
-                            <li><a href="http://www.url.com">Anchor Text</a></li>
-                            <li><a href="http://www.url.com">Anchor Text</a></li>
+                            <li><a href="/?/main">Anchor Text</a></li>
+                            <li><a href="/?/alternative">Anchor Text</a></li>
+                            <li><a href="/?/header">Anchor Text</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://www.url.com">Anchor Text</a></li>
+                    <li><a href="/?/alternative">Anchor Text</a></li>
                 </ul>
             </nav>
         </header>
