@@ -2,7 +2,7 @@
 
 <main>
     <header> 
-        Kajsas Rosor
+        <span> Kajsas Rosor </span>
     </header>
 
     <article>
