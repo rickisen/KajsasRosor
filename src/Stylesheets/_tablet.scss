@@ -23,6 +23,7 @@
         color:white;
         max-width:100em; 
         width:100%; 
+        font-weight:700;
         > ul {
             @include mainSizing; 
             padding:0 1em;
@@ -36,6 +37,7 @@
                     display:block; 
 
                     li {
+                        font-size:15px;
                         display:none; 
                         padding: 5px;
                     }
