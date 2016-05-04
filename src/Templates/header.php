@@ -14,7 +14,6 @@
                 <img src="/Images/logo.png" alt="Kajsas rosor Logo">
                 <h1 id="slogan">Klippt och skuren för rosor</h1>
                 <button class="hamburger">H</button>
-                <div class="clear"></div>
             </div>
             <nav>
                 <ul>
