@@ -24,18 +24,29 @@
         width:100%; 
         > ul {
             @include mainSizing; 
-           > li {
-               display:inline-block;
-               ul {
-                   padding: 0;
-                   position: absolute;
-                   background-color:transparentize($primaryColor, 0.2);
-                   li {
-                       display:inline-block; 
-                       padding: 5px;
-                   }
-               } 
-           }
+            > li {
+                display:inline-block;
+
+                ul {
+                    padding: 0;
+                    position: absolute;
+                    background-color:transparentize($primaryColor, 0.2);
+                    display:block; 
+
+                    li {
+                        display:none; 
+                        padding: 5px;
+                    }
+                } 
+            }
+
+            > li:hover{
+                color:black;
+
+                li {
+                    display:inline-block;
+                }
+            }
         }
 
         a {
