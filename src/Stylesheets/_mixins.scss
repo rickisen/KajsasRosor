@@ -2,8 +2,6 @@ $primaryColor:#d41378;
 $black:#000; 
 $white:#fff;
 $mobileWidth:640px;
-$blooperWidth:240px;
-$blooperHeight:250px;
 
 @mixin clearfix {
     &:before, &:after {
@@ -15,8 +13,8 @@ $blooperHeight:250px;
         clear:both;
     }
 }
+
 @mixin mainSizing {
-    padding:0 1em;
     margin:0 auto;
 }
 
@@ -29,4 +27,6 @@ $blooperHeight:250px;
     min-height:50px;
 }
 
-.clear { clear:both; } 
+.clear { clear:both; }
+.right { float:right; }
+.left  { float:left; }

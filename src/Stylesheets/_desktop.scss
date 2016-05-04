@@ -1,7 +1,8 @@
 .wrapper > header {
     .top {
-        max-width:48em;
+        width:50em;
         img {
+            margin:1em 0;
         }
 
         button {
@@ -9,12 +10,14 @@
 
         #slogan {
             color:red;
+            margin:1em 0;
         }
     }
 
     nav {
         > ul {
-            max-width:48em;
+            max-width:50em;
+            padding:0;
             > li {
                 ul {
                     li {
@@ -35,8 +38,13 @@
 
 .wrapper > main {
     bottom:14.375em;
-    max-width:48em;
+    width:48em;
+    padding:1em;
+
     > header {
+        span {
+            padding:0 2em;
+        }
     }
 
     > article {

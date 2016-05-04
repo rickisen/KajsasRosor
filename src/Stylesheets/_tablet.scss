@@ -1,6 +1,7 @@
 .wrapper > header {
     .top {
         img {
+            margin:1em;
         }
 
         button {
@@ -8,9 +9,9 @@
         }
 
         #slogan {
+            margin:1em;
             float:right;
             display:inline;
-            margin-right:1em;
         }
     }
 
@@ -24,6 +25,7 @@
         width:100%; 
         > ul {
             @include mainSizing; 
+            padding:0 1em;
             > li {
                 display:inline-block;
 
@@ -63,6 +65,7 @@
 
 .wrapper > main {
     position: relative;
+
     > div {
         box-sizing:border-box;
     }
@@ -71,28 +74,41 @@
         width:100%;
         position:absolute;
         display:block;
-        left:0em;
         top:-1.5em;
+        left:0;
         line-height:1.5em;
+        padding:0;
         background-color:rgba(40,40,40,0.7); 
+
         span {
-            padding:0 2em;
+            padding:0 1em;
             color:white;
         }
     }
 
     > article {
-        width: 70%;
-        float:left;
-        // padding: 1em;
+        width:70%;
         line-height:1.5em;
+        margin:0;
+        float:left;
+
+        .right, .left {
+            min-width:0;
+            max-width:50%;
+            box-sizing:border-box;
+        }
+
+        .right { float:right; }
+        .left  { float:left; }
+
         header > h1 {
             margin: 0;
         }
     }
 
     > address {
-        width:25%;
+        margin:0;
+        width:20%;
         display:block;
         float:right;
     }
@@ -101,5 +117,32 @@
         clear:both;
         background-color:black;
         color:white;
+    }
+}
+
+#bloopers figure {
+    width: 240px;
+
+    img {
+
+    }
+
+    figcaption {
+
+        a {
+            
+        }
+
+        h2 {
+
+        }
+        
+        p {
+
+        }
+    }
+
+    figcaption:hover { 
+
     }
 }
