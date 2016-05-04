@@ -10,16 +10,16 @@
             <h1>Detta är Kajsas Rosor</h1>
         </header>
 
-        <img src="/Images/mainRose.svg" alt="A picture of a Rose"/>
+        <img class="right" src="/Images/Blomma.png" srcset="/Images/Blomma.svg" alt="A picture of a Rose"/>
 
-        <p>
+        <p class="left" >
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
             tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
             vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
 
-        <section>
+        <section class="clear">
             <h2>Rosen Idag</h2>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
