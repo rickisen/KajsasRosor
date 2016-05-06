@@ -112,11 +112,12 @@ body {
         }
     }
 
-    > address {
+    > aside {
         display:none;
     }
 
     > footer {
+        margin:0 -1em -1em -1em;
         font-size:14;
         background-color:black;
         color:white;
