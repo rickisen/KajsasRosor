@@ -2,7 +2,9 @@
 
 <main>
     <header> 
-        <span> Kajsas Rosor </span>
+        <nav>
+            <a href="/?/main">Kajsas Rosor </a>
+        </nav>
     </header>
 
     <article>

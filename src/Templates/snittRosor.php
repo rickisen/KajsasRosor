@@ -2,7 +2,9 @@
 
 <main>
     <header> 
-        <span> Kajsas Rosor > Snitt Rosor </span>
+        <nav>
+            <a href="/?/main">Kajsas Rosor </a> > <a href="/?/snittRosor">Snittrosor</a>
+        </nav>
     </header>
 
     <article>
