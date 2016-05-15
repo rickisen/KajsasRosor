@@ -1,40 +1,40 @@
 "use strict"
-var previousSize = 0;
+
 var previousWasMobile = false;
 
+var headerSpacer = $('#headerSpacer');
+var header       = $('.wrapper > header');
+var nav          = $('.wrapper > header > nav');
+
+
 $(document).ready(function(){
-    headerFix();
+    header.css('position', 'fixed'); 
+    matchSpacerWithHeader();
 
     $(window).resize(handleResize);
 
     $('.hamburger').on('click', toggleHamburger ); 
 }); 
 
-function headerFix() {
-    var headerSpacer = $('#headerSpacer'); 
-    var header = $('.wrapper > header'); 
-
-    header.css('position', 'fixed'); 
-    headerSpacer.css('height', header.height()); 
+function matchSpacerWithHeader() {
+    headerSpacer.css('height', header.height());  // doesnt allwaus work ?
 }
 
 function handleResize(event) {
-    var nav = $('.wrapper > header > nav'); 
-
     if (!previousWasMobile && areWeMobile()){
         nav.css('display','none'); 
+        matchSpacerWithHeader();
     } else if ( previousWasMobile && !areWeMobile() ){
         nav.css('display','block'); 
-        headerFix();
+        matchSpacerWithHeader();
     }
 
     previousWasMobile = areWeMobile();
  }
 
 function toggleHamburger(event) {
-    var nav = $('.wrapper > header > nav'); 
-
     var navHeight = getHeightOfHiddenElem(nav); 
+
     if ( nav.css('display') == 'none' ){
         nav.slideDown(); 
         $('#headerSpacer').animate({ height : '+=' + navHeight}, 400); 
@@ -66,4 +66,3 @@ function getHeightOfHiddenElem(hiddenElement) {
 
     return height;
 }
-
