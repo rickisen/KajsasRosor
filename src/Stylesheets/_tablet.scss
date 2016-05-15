@@ -24,14 +24,17 @@
         display:block;
         position:absolute;
         line-height:1.5em;
-        background-color:transparentize($primaryColor, 0.2);
+        background-color:transparentize($primaryColor, 0.1);
         color:white;
         max-width:100em; 
         width:100%; 
         font-weight:700;
+
         > ul {
             @include mainSizing; 
             padding:0 1em;
+            font-size:16px;
+            text-align:right;
             > li {
                 display:inline-block;
                 padding:0 0.25em;
@@ -39,18 +42,30 @@
                 ul {
                     padding: 0;
                     position: absolute;
-                    background-color:transparentize($primaryColor, 0.2);
+                    background-color:transparentize($primaryColorBg, 0.1);
                     display:block; 
 
                     li {
                         font-size:15px;
                         display:none; 
                         padding: 5px;
+
+                        &:before {
+                            content:"";
+                        }
+
+                        & a:focus, & a:active {
+                            color:$primaryColor;
+                            outline:0;
+                        }
                     }
                 } 
             }
 
             > li:hover{
+                label {
+                    border-bottom: 2px solid transparentize($primaryColorBg, 0.1);
+                }
                 li {
                     display:inline-block;
                 }
