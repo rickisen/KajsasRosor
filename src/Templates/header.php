@@ -6,27 +6,33 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Stylesheets/main.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" 
+        integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" crossorigin="anonymous">
 </head>
 <body>
     <div class="wrapper">
         <header> 
             <div class="top">
-                <img src="/Images/logo.png" alt="Kajsas rosor Logo">
+                <a href="/?/main"> <img src="/Images/logo.png" alt="Kajsas rosor Logo"> </a>
                 <h1 id="slogan">Klippt och skuren för rosor</h1>
-                <button class="hamburger">H</button>
+                <button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
             <nav>
                 <ul>
-                    <li><a id="testa" href="/?/main">Anchor Text</a></li>
                     <li>
-                        <label for="snittrosor">Snittrosor</label>
+                        <label for="snittrosor"><a href="/?/snittRosor">Snittrosor</a></label>
                         <ul id="snittrosor" class="sublist">
-                            <li><a href="/?/main">Anchor Text</a></li>
-                            <li><a href="/?/alternative">Anchor Text</a></li>
-                            <li><a href="/?/header">Anchor Text</a></li>
+                            <li><a href="/?/pinkRoses">Röda Rosor</a></li>
+                            <li><a href="/?/pinkRoses">Gula Rosor</a></li>
+                            <li><a href="/?/pinkRoses">Rosa Rosor</a></li>
+                            <li><a href="/?/pinkRoses">Vita Rosor</a></li>
                         </ul>
                     </li>
-                    <li><a href="/?/alternative">Anchor Text</a></li>
+                    <li><a href="/?/main">Rosenbuskar</a></li>
+                    <li><a href="/?/main">Om Rosor</a></li>
+                    <li><a href="/?/main">Köp Online</a></li>
+                    <li><a href="/?/main">Skötsel Råd</a></li>
+                    <li><a href="/?/main">Om Kajsas Rosor</a></li>
                 </ul>
             </nav>
         </header>
