@@ -2,7 +2,7 @@
     height:100px;
     .top {
         a {
-            padding:1em;
+            padding:1rem;
 
             img {
                 height:64px;
@@ -26,18 +26,18 @@
         line-height:1.5em;
         background-color:transparentize($primaryColor, 0.1);
         color:white;
-        max-width:100em; 
+        max-width:100rem; 
         width:100%; 
         font-weight:700;
 
         > ul {
             @include mainSizing; 
-            padding:0 1em;
+            padding:0 1rem;
             font-size:16px;
             text-align:right;
             > li {
                 display:inline-block;
-                padding:0 0.25em;
+                padding:0 0.25rem;
 
                 ul {
                     padding: 0;
@@ -99,21 +99,27 @@
         width:100%;
         position:absolute;
         display:block;
-        top:-1.5em;
         left:0;
+        top:-1.5em;
         line-height:1.5em;
+        font-size:13px;
+        font-weight:500;
         padding:0;
         background-color:rgba(40,40,40,0.7); 
 
-        span {
-            padding:0 1em;
+        nav {
+            padding:0 1rem;
             color:white;
+
+            a {
+                text-decoration:none;
+                color:white;
+            }
         }
     }
 
     > article {
         width:70%;
-        line-height:1.5em;
         margin:0;
         float:left;
 
@@ -123,6 +129,7 @@
             box-sizing:border-box;
         }
 
+        // counter mobile overide
         .right { float:right; }
         .left  { float:left; }
 

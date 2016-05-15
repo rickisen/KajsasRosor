@@ -1,10 +1,10 @@
 .wrapper > header {
     .top {
-        width:50em;
+        width:50rem;
         a {
-            padding:1em 0;
+            padding:1rem 0;
+
             img {
-                // margin:1rem 0;
             }
         }
 
@@ -18,7 +18,7 @@
 
     nav {
         > ul {
-            max-width:50em;
+            max-width:50rem;
             padding:0;
             > li {
                 ul {
@@ -34,18 +34,18 @@
 }
 
 #hero {
-    height:32.25em;
+    height:32.25rem;
     background-position:50% 57%; 
 }
 
 .wrapper > main {
-    bottom:14.375em;
-    width:48em;
-    padding:1em;
+    bottom:14.375rem;
+    width:48rem;
+    padding:1rem;
 
     > header {
-        span {
-            padding:0 2em;
+        nav {
+            padding:0 2rem;
         }
     }
 
@@ -58,6 +58,6 @@
     }
 
     > footer {
-        margin:0 -1em -1em -1em;
+        margin:0 -1rem -1rem -1rem;
     }
 }
