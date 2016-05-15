@@ -43,7 +43,6 @@ function handleNewMain(dom) {
     var newHero = dom.getElementById('hero');
     var oldHero = document.getElementById('hero');
     $(oldHero).replaceWith($(newHero));
-    console.log(newHero);
 
     // makes sure any new local links in the 
     // document has been ajax enabled.
