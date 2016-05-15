@@ -1,8 +1,11 @@
 .wrapper > header {
     .top {
         width:50em;
-        img {
-            margin:1rem 0;
+        a {
+            padding:1em 0;
+            img {
+                // margin:1rem 0;
+            }
         }
 
         button {

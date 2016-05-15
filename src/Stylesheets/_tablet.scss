@@ -1,7 +1,12 @@
 .wrapper > header {
+    height:100px;
     .top {
-        img {
-            margin:1rem;
+        a {
+            padding:1em;
+
+            img {
+                height:64px;
+            }
         }
 
         button {
@@ -29,6 +34,7 @@
             padding:0 1em;
             > li {
                 display:inline-block;
+                padding:0 0.25em;
 
                 ul {
                     padding: 0;
@@ -45,8 +51,6 @@
             }
 
             > li:hover{
-                color:black;
-
                 li {
                     display:inline-block;
                 }
@@ -56,13 +60,17 @@
         a {
             text-decoration:none;
             color:white;
+
+            &:focus, &:active {
+                color:black;
+                outline:0;
+            }
         }
     }
 }
 
 #hero {
-    // height: 15.62em;
-    height: 20vh;
+    height:20vh;
 }
 
 .wrapper > main {

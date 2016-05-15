@@ -3,6 +3,9 @@
 body {
     background-color:black;
     font-family: 'Roboto', sans-serif;
+    a:focus {
+        outline:0;
+    }
 }
 
 .wrapper {
@@ -19,29 +22,38 @@ body {
 .wrapper > header {
     width:100%;
     max-width:100em;
-    height:100px;
+    height:68px;
     background-color:black;
     z-index:2;
 
     .top {
         @include mainSizing; 
-        height:100px;
+        overflow:hidden;
 
-        img {
-            width:216;
-            max-width:35%;
+        a {
+            float:left;
+            padding:12px;
+            img {
+                height:40px; 
+            }
         }
 
         button, #slogan {
+            float:right;
             max-width:75%;
             margin:0;
         }
 
         button {
+            border: none;
             background-color:black;
             color:$primaryColor;
-            border: none;
-            font-size:4em,
+            height:68px;
+            margin:0;
+
+            i {
+                font-size:68px;
+            }
         }
 
         #slogan {
@@ -57,14 +69,27 @@ body {
         background-color:$primaryColor;
         color:black;
         display:none;
+
         ul {
            margin: 0; 
            list-style:none;
+           font-size:22px;
+           font-weight:700;
+
+           ul {
+               font-size:1rem;
+               li:before{
+                   content:"- "
+               }
+           }
         }
 
-        a{
+        a {
             text-decoration:none;
             color:black;
+            &:focus, &:active {
+                color:white;
+            }
         }
     }
 }
@@ -89,7 +114,7 @@ body {
         display:none;
     }
 
-    > article {
+    > article, aside {
         line-height:1.5em;
 
         .right, .left {
