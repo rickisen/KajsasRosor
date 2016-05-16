@@ -1,13 +1,15 @@
 "use strict"
 
 var previousWasMobile = false;
-
-var headerSpacer = $('#headerSpacer');
-var header       = $('.wrapper > header');
-var nav          = $('.wrapper > header > nav');
-
+var headerSpacer = {};
+var header       = {};
+var nav          = {};
 
 $(document).ready(function(){
+    var headerSpacer = $('#headerSpacer');
+    var header       = $('.wrapper > header');
+    var nav          = $('.wrapper > header > nav');
+
     header.css('position', 'fixed'); 
     matchSpacerWithHeader();
 
@@ -37,10 +39,10 @@ function toggleHamburger(event) {
 
     if ( nav.css('display') == 'none' ){
         nav.slideDown(); 
-        $('#headerSpacer').animate({ height : '+=' + navHeight}, 400); 
+        headerSpacer.animate({ height : '+=' + navHeight}, 400); 
     } else {
         nav.slideUp(); 
-        $('#headerSpacer').animate({ height : '-=' + navHeight}, 400); 
+        headerSpacer.animate({ height : '-=' + navHeight}, 400); 
     }
 }
 
