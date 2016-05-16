@@ -1,4 +1,4 @@
-<div id="hero" class="bg-image" style="background-image:url('/Images/heroRed.jpg')" alt="Picture of a rose"> </div>
+<div class="hero" class="bg-image" style="background-image:url('/Images/heroRed.jpg')" alt="Picture of a rose"> </div>
 
 <main>
     <header> 

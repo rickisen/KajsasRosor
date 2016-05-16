@@ -38,13 +38,36 @@ function handleNewMain(dom) {
     var newMain = dom.getElementsByTagName('main')[0];
     var oldMain = document.getElementsByTagName('main')[0]; 
     oldMain.innerHTML = newMain.innerHTML ;
+    // fadeReplace(oldMain, newMain, 100); 
 
     // do the same for the hero image
-    var newHero = dom.getElementById('hero');
-    var oldHero = document.getElementById('hero');
-    $(oldHero).replaceWith($(newHero));
+    var newHero = dom.getElementsByClassName('hero')[0];
+    var oldHero = document.getElementsByClassName('hero')[0];
+    fadeReplace(oldHero, newHero, 1000); 
 
     // makes sure any new local links in the 
     // document has been ajax enabled.
     addListeners();
+}
+
+function fadeReplace(original, replacment, duration) {
+    // make sure they are jquery objects
+    // and get the destination coordinates
+    var original       = $(original);
+    var replacment     = $(replacment);
+    var replacmentMask = $(replacment).clone();
+    var destination    = original.offset();
+
+    // first place the replacmentMask on top of 
+    // the destination, and fade it in
+    replacmentMask.css('display','none'); 
+    original.parent().append(replacmentMask);
+    replacmentMask.css('position','absolute'); 
+    replacmentMask.css('top', destination.top); 
+    replacmentMask.css('left', destination.left); 
+    // original.children().animate({opacity: 0}, duration/10);    
+    replacmentMask.fadeIn(duration, function(){
+        original.replaceWith(replacment);
+        replacmentMask.remove(); 
+    });
 }
