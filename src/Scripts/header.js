@@ -6,9 +6,9 @@ var header       = {};
 var nav          = {};
 
 $(document).ready(function(){
-    var headerSpacer = $('#headerSpacer');
-    var header       = $('.wrapper > header');
-    var nav          = $('.wrapper > header > nav');
+    headerSpacer = $('#headerSpacer');
+    header       = $('.wrapper > header');
+    nav          = $('.wrapper > header > nav');
 
     header.css('position', 'fixed'); 
     matchSpacerWithHeader();
@@ -19,7 +19,7 @@ $(document).ready(function(){
 }); 
 
 function matchSpacerWithHeader() {
-    headerSpacer.css('height', header.height());  // doesnt allwaus work ?
+    headerSpacer.css('height', header.height());
 }
 
 function handleResize(event) {
