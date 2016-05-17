@@ -13,7 +13,7 @@
     <div class="wrapper">
         <header> 
             <div class="top">
-                <a href="/?/main"> <img src="/Images/logo.png" alt="Kajsas rosor Logo"> </a>
+                <a href="/?/main"> <img class="right" src="/Images/logo2.png" srcset="/Images/Logo.svg" alt="Logo"/> </a>
                 <h1 id="slogan">Klippt och skuren för rosor</h1>
                 <button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
