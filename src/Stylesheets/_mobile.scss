@@ -1,14 +1,20 @@
 body {
-    background-color:black;
-    font-family: 'Roboto', sans-serif;
-    a:focus {
-        outline:0;
-    }
+  background-color:black;
+  font-family: 'Roboto', sans-serif;
+  a:focus {
+    outline:0;
+  }
+}
+
+#googleMaps {
+  width:13rem;
+  height:13rem;
+  background-color:red;
 }
 
 .wrapper {
-    max-width:100rem;
-    margin:0 auto;
+  max-width:100rem;
+  margin:0 auto;
 }
 
 // Normally the header would be made fixed here, 
@@ -18,204 +24,205 @@ body {
 // so this way it should work fine even in 
 // browsers without javascript
 .wrapper > header {
-    width:100%;
-    max-width:100rem;
-    background-color:black;
-    z-index:3;
+  width:100%;
+  max-width:100rem;
+  background-color:black;
+  z-index:3;
 
-    .top {
-        @include mainSizing; 
-        overflow:hidden;
-        height:68px;
+  .top {
+    @include mainSizing; 
+    overflow:hidden;
+    height:68px;
 
-        a {
-            float:left;
-            padding:12px;
-            img {
-                height:40px; 
-            }
-        }
-
-        button, #slogan {
-            float:right;
-            max-width:75%;
-            margin:0;
-        }
-
-        button {
-            outline:none;
-            border: none;
-            background-color:black;
-            color:$primaryColor;
-            height:68px;
-            margin:0;
-
-            i {
-                font-size:68px;
-            }
-        }
-
-        #slogan {
-            font-size:27px;
-            font-style:italic;
-            font-weight:100;
-            display:none;
-            color:grey;
-        }
+    a {
+      float:left;
+      padding:12px;
+      img {
+        height:40px; 
+      }
     }
 
-    nav {
-        background-color:$primaryColor;
-        color:black;
+    button, #slogan {
+      float:right;
+      max-width:75%;
+      margin:0;
+    }
+
+    button {
+      outline:none;
+      border: none;
+      background-color:black;
+      color:$primaryColor;
+      height:68px;
+      margin:0;
+
+      i {
+        font-size:68px;
+      }
+    }
+
+    #slogan {
+      font-size:27px;
+      font-style:italic;
+      font-weight:100;
+      display:none;
+      color:grey;
+    }
+  }
+
+  nav {
+    background-color:$primaryColor;
+    color:black;
+    display:none;
+
+    ul {
+      margin: 0; 
+      list-style:none;
+      font-size:22px;
+      font-weight:700;
+
+      ul {
+        font-size:1rem;
+        padding:0 0.7rem; 
         display:none;
 
-        ul {
-           margin: 0; 
-           list-style:none;
-           font-size:22px;
-           font-weight:700;
-
-           ul {
-               font-size:1rem;
-               padding:0 0.7rem; 
-
-               li:before{
-                   content:"- "
-               }
-           }
+        li:before{
+          content:"- "
         }
-
-        a {
-            text-decoration:none;
-            color:black;
-            &:focus, &:active {
-                color:white;
-            }
-        }
+      }
     }
+
+    a {
+      text-decoration:none;
+      color:black;
+      &:focus, &:active {
+        color:white;
+      }
+    }
+  }
 }
 
 .hero {
-    @include bgimg; 
-    max-width:100em;
-    width:100%; 
-    height:17.8vh;
+  @include bgimg; 
+  max-width:100em;
+  width:100%; 
+  height:17.8vh;
 }
 
 .wrapper > main {
-    @include mainSizing; 
-    background-color:transparentize(white, 0.1);
-    padding:1rem 0;
-    z-index:2;
+  @include mainSizing; 
+  background-color:transparentize(white, 0.1);
+  padding:1rem 0;
+  z-index:2;
 
-    > * {
-        padding:0 1rem;
+  > * {
+    padding:0 1rem;
+  }
+
+  > header {
+    display:none;
+  }
+
+  > article, aside {
+    line-height:1.5em;
+
+    .right, .left {
+      float:none;
+      width:100%;
     }
 
-    > header {
-        display:none;
+    h1 {
+      font-size: 30px;
+      font-weight:500;
     }
 
-    > article, aside {
-        line-height:1.5em;
-
-        .right, .left {
-            float:none;
-            width:100%;
-        }
-
-        h1 {
-            font-size: 30px;
-            font-weight:500;
-        }
-        
-        h2 {
-            font-size: 20px;
-            font-weight:500;
-        }
-
-        p {
-            font-size: 14px;
-        }
-
-        img {
-            width:100%;
-        }
+    h2 {
+      font-size: 20px;
+      font-weight:500;
     }
 
-    > aside {
-        display:none;
+    p {
+      font-size: 14px;
     }
 
-    > footer {
-        margin:0 0 -1rem 0;
-        font-size:14;
-        background-color:black;
-        color:white;
+    img {
+      width:100%;
     }
+  }
+
+  > aside {
+    display:none;
+  }
+
+  > footer {
+    margin:0 0 -1rem 0;
+    font-size:14;
+    background-color:black;
+    color:white;
+  }
 }
 
 
 #bloopers figure {
-    width: 49%;
-    height: 250px;
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding:0;
+  width: 49%;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding:0;
 
-    img {
-        @include bgimg; 
-        position: absolute;
-        width: 100%;
-        height: 100%;
+  img {
+    @include bgimg; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  figcaption {
+    background-color:transparentize($primaryColor, 0.2);
+    position: absolute;
+    width: 100%;
+    height:4rem;
+    text-align:center;    
+    overflow:hidden;
+
+    transition-timing-function: ease-in;
+    transition-property: height, background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+
+    a {
+      text-decoration:none;
     }
 
-    figcaption {
-        background-color:transparentize($primaryColor, 0.2);
-        position: absolute;
-        width: 100%;
-        height:4rem;
-        text-align:center;    
-        overflow:hidden;
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      width: 100%;
+      color: white;
 
-        transition-timing-function: ease-in;
-        transition-property: height, background-color;
-        transition-duration: .2s;
-        transition-timing-function: linear;
-
-        a {
-            text-decoration:none;
-        }
-
-        h2 {
-            font-size: 22px;
-            font-weight: 500;
-            width: 100%;
-            color: white;
-
-            transition-timing-function: ease-in;
-            transition-property: color;
-            transition-duration: 0.5s;
-            transition-timing-function: linear;
-        }
-
-        p {
-            display:none;
-            color: white;
-        }
+      transition-timing-function: ease-in;
+      transition-property: color;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
     }
 
-    figcaption:hover {
-        height: 100%;
-        background-color:transparentize($primaryColor, 0.05);
-
-        h2 { 
-            color:black; 
-        }
-
-        p {
-            display:inline;
-        }
+    p {
+      display:none;
+      color: white;
     }
+  }
+
+  figcaption:hover {
+    height: 100%;
+    background-color:transparentize($primaryColor, 0.05);
+
+    h2 { 
+      color:black; 
+    }
+
+    p {
+      display:inline;
+    }
+  }
 }

@@ -17,11 +17,11 @@ case 2:
 if ( isset($site) ){
     if ( isset($mode) && $mode == 'mini' ) {
         echo '<!DOCTYPE HTML> <html><head><meta charset="utf-8"></head><body>'; 
-        include 'Templates/'.$site.'.php'; // security risk?
+        include 'Templates/'.$site.'.php'; 
         echo '</body></html>'; 
     } else {
         include 'Templates/header.php'; 
-        include 'Templates/'.$site.'.php'; // security risk?
+        include 'Templates/'.$site.'.php';
         include 'Templates/footer.php'; 
     }
 } else {

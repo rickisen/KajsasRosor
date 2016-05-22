@@ -60,7 +60,7 @@
 
             <section>
               <h2>Karta</h2>  
-              <img src="Images/map.jpg" alt="An image of a map displaying the location of the store"/>
+              <div id="googleMaps" class="googleMaps"></div>
             </section>
         </address>
     </aside>
